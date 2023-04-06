@@ -1,45 +1,61 @@
+
+// Задание 1
+// Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
 const cube = (number) => {
     return Math.pow(number, 3);
 }
 console.log(cube(2) + cube(3));
 
-// let a = prompt('rus');
-// console.log(Number.isFinite(Number(a)));
+// Задание 2
+// Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
+// Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
 
-// const salary = () => {
-//     let number = prompt('Введите значение:')
-//     if (Number.isFinite(Number(number))) {
-//         return number * 0.87;
-//     } else {
-//         return 'Значение введено неверно!'
-//     }
+const salary = () => {
+    let number = prompt('Введите значение:')
+    if (Number.isFinite(Number(number))) {
+        return `Размер заработной платы за вычетом налогов равен: ${number * 0.87}`;
+    } else {
+        return 'Значение введено неверно!'
+    }
 
 
-// }
-// console.log(salary());
+}
+console.log(salary());
 
-// const maxNum = () => {
-//     let num1 = prompt('Введите значение 1');
-//     let num2 = prompt('Введите значение 2');
-//     let num3 = prompt('Введите значение 3');
-//     let max;
-//     if (Number.isFinite(Number(num1)) && Number.isFinite(Number(num2)) && Number.isFinite(Number(num3))) {
-//         num1 = Number(num1);
-//         num2 = Number(num2);
-//         num3 = Number(num3);
-//     } else {
-//         return 'Введены неверные значения!'
-//     }
-//     if (num1 > num2) {
-//         (num1 > num3) ? max = num1 : max = num3;
-//     } else {
-//         (num2 > num3) ? max = num2 : max = num3;
-//     }
-//     return max;
 
-// }
 
-// console.log(maxNum());
+// Задание 3
+// Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
+const maxNum = () => {
+    let num1 = prompt('Введите значение 1');
+    let num2 = prompt('Введите значение 2');
+    let num3 = prompt('Введите значение 3');
+    let max;
+    if (Number.isFinite(Number(num1)) && Number.isFinite(Number(num2)) && Number.isFinite(Number(num3))) {
+        num1 = Number(num1);
+        num2 = Number(num2);
+        num3 = Number(num3);
+    } else {
+        return 'Введены неверные значения!'
+    }
+    if (num1 > num2) {
+        (num1 > num3) ? max = num1 : max = num3;
+    } else {
+        (num2 > num3) ? max = num2 : max = num3;
+    }
+    return max;
+
+}
+
+console.log(maxNum());
+
+// Задание 4
+// Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций (каждая функция выполняет одну из них):
+// 1. Сложение
+// 2. Разность
+// 3. Умножение
+// 4. Деление
+// Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
 
 let sum = (num1, num2) => num1 + num2;
 console.log(sum(5, 6));
